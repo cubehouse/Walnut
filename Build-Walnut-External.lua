@@ -1,7 +1,7 @@
 -- WalnutExternal.lua
 
 VULKAN_SDK = os.getenv("VULKAN_SDK") or "C:\\VulkanSDK\\1.3.250.1"
-OPENSSL_SDK = os.getenv("OPENSSL_SDK") or "C:\\OpenSSL-Win64"
+OPENSSL_SDK = os.getenv("OPENSSL_SDK") or "C:\\Program Files\\OpenSSL-Win64"
 
 IncludeDir = {}
 IncludeDir["VulkanSDK"] = "%{VULKAN_SDK}/Include"
