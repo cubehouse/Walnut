@@ -12,7 +12,7 @@ project "WalnutApp"
       "../vendor/imgui",
       "../vendor/glfw/include",
       "../vendor/cpp-httplib",
-
+      "../vendor/json/single_include/nlohmann",
 
       "../Walnut/Source",
       "../Walnut/Platform/GUI",
