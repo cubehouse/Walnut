@@ -22,3 +22,8 @@ Once you've cloned, run `scripts/Setup.bat` to generate Visual Studio 2022 solut
 
 ### Additional
 - Walnut uses the [Roboto](https://fonts.google.com/specimen/Roboto) font ([Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+
+### Personal Notes
+
+- Install OpenSSL from https://slproweb.com/products/Win32OpenSSL.html
+  - Eg. "Win64 OpenSSL v1.1.1u" (not light edition)

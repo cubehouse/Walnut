@@ -30,10 +30,12 @@ project "Walnut"
 
    links
    {
-       "ImGui",
-       "GLFW",
+      "ImGui",
+      "GLFW",
 
-       "%{Library.Vulkan}",
+      "%{Library.Vulkan}",
+      "%{Library.openssl}",
+      "%{Library.libcrypto}",
    }
 
    targetdir ("../../bin/" .. outputdir .. "/%{prj.name}")

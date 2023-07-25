@@ -11,12 +11,15 @@ project "WalnutApp"
    {
       "../vendor/imgui",
       "../vendor/glfw/include",
+      "../vendor/cpp-httplib",
+
 
       "../Walnut/Source",
       "../Walnut/Platform/GUI",
 
       "%{IncludeDir.VulkanSDK}",
       "%{IncludeDir.glm}",
+      "%{IncludeDir.openssl}",
    }
 
     links

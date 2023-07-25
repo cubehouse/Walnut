@@ -4,13 +4,27 @@
 #include "Walnut/Image.h"
 #include "Walnut/UI/UI.h"
 
+#define CPPHTTPLIB_OPENSSL_SUPPORT
+#include "httplib.h"
+#include <Windows.h>
+
 class ExampleLayer : public Walnut::Layer
 {
 public:
 	virtual void OnUIRender() override
 	{
 		ImGui::Begin("Hello");
-		ImGui::Button("Button");
+		if (ImGui::Button("Button"))
+		{
+			// HTTPS
+			httplib::Client cli("https://api.themeparks.wiki");
+
+			auto res = cli.Get("/v1");
+			res->status;
+			res->body;
+
+			std::cout << res->body;
+		}
 		ImGui::End();
 
 		ImGui::ShowDemoWindow();

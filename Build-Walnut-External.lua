@@ -1,6 +1,7 @@
 -- WalnutExternal.lua
 
-VULKAN_SDK = os.getenv("VULKAN_SDK")
+VULKAN_SDK = os.getenv("VULKAN_SDK") or "C:\\VulkanSDK\\1.3.250.1"
+OPENSSL_SDK = os.getenv("OPENSSL_SDK") or "C:\\OpenSSL-Win64"
 
 IncludeDir = {}
 IncludeDir["VulkanSDK"] = "%{VULKAN_SDK}/Include"
@@ -12,6 +13,13 @@ LibraryDir["VulkanSDK"] = "%{VULKAN_SDK}/Lib"
 
 Library = {}
 Library["Vulkan"] = "%{LibraryDir.VulkanSDK}/vulkan-1.lib"
+
+IncludeDir["cpp-httplib"] = "../vendor/cpp-httplib"
+
+LibraryDir["openssl"] = "%{OPENSSL_SDK}/lib"
+IncludeDir["openssl"] = "%{OPENSSL_SDK}/include"
+Library["openssl"] = "%{LibraryDir.openssl}/libssl.lib"
+Library["libcrypto"] = "%{LibraryDir.openssl}/libcrypto.lib"
 
 group "Dependencies"
    include "vendor/imgui"
